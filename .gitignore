@@ -21,6 +21,7 @@
 *.smod
 *.vs
 *.pdb
+*.dat
 
 # Compiled Static libraries
 *.lai
