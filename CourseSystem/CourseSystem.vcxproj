@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3189f01e-e806-46e3-9659-a4550f86bd2c}</ProjectGuid>
+    <RootNamespace>CourseSystem</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\commands\AddStudentCommand.cpp" />
+    <ClCompile Include="source\commands\AddTeacherCommand.cpp" />
+    <ClCompile Include="source\commands\AddToCourseCommand.cpp" />
+    <ClCompile Include="source\commands\AssignHomeworkCommand.cpp" />
+    <ClCompile Include="source\commands\ChangePasswordCommand.cpp" />
+    <ClCompile Include="source\commands\ClearMailboxCommand.cpp" />
+    <ClCompile Include="source\commands\Command.cpp" />
+    <ClCompile Include="source\commands\CreateCourseCommand.cpp" />
+    <ClCompile Include="source\commands\EnrollCommand.cpp" />
+    <ClCompile Include="source\commands\GradeAssignmentCommand.cpp" />
+    <ClCompile Include="source\commands\LoginCommand.cpp" />
+    <ClCompile Include="source\commands\LogoutCommand.cpp" />
+    <ClCompile Include="source\commands\MailboxCommand.cpp" />
+    <ClCompile Include="source\commands\MessageAllCommand.cpp" />
+    <ClCompile Include="source\commands\MessageStudentsCommand.cpp" />
+    <ClCompile Include="source\commands\MessageUserCommand.cpp" />
+    <ClCompile Include="source\commands\SubmitAssignmentCommand.cpp" />
+    <ClCompile Include="source\commands\ViewGradesCommand.cpp" />
+    <ClCompile Include="source\commands\ViewSubmissionsCommand.cpp" />
+    <ClCompile Include="source\Context.cpp" />
+    <ClCompile Include="source\CourseSystem.cpp" />
+    <ClCompile Include="source\courses\Assignment.cpp" />
+    <ClCompile Include="source\courses\Course.cpp" />
+    <ClCompile Include="source\courses\Grade.cpp" />
+    <ClCompile Include="source\courses\Submission.cpp" />
+    <ClCompile Include="source\messages\Mailbox.cpp" />
+    <ClCompile Include="source\messages\Message.cpp" />
+    <ClCompile Include="source\messages\MessageTime.cpp" />
+    <ClCompile Include="source\MyString.cpp" />
+    <ClCompile Include="source\users\Admin.cpp" />
+    <ClCompile Include="source\users\Student.cpp" />
+    <ClCompile Include="source\users\Teacher.cpp" />
+    <ClCompile Include="source\users\User.cpp" />
+    <ClCompile Include="source\users\UserFactory.cpp" />
+    <ClCompile Include="source\users\UserRepository.cpp" />
+    <ClCompile Include="source\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\command\AddStudentCommand.h" />
+    <ClInclude Include="headers\command\AddTeacherCommand.h" />
+    <ClInclude Include="headers\command\AddToCourseCommand.h" />
+    <ClInclude Include="headers\command\AssignHomeworkCommand.h" />
+    <ClInclude Include="headers\command\ChangePasswordCommand.h" />
+    <ClInclude Include="headers\command\ClearMailboxCommand.h" />
+    <ClInclude Include="headers\command\Command.h" />
+    <ClInclude Include="headers\command\CommandFactory.h" />
+    <ClInclude Include="headers\command\CreateCourseCommand.h" />
+    <ClInclude Include="headers\command\EnrollCommand.h" />
+    <ClInclude Include="headers\command\GradeAssignmentCommand.h" />
+    <ClInclude Include="headers\command\LoginCommand.h" />
+    <ClInclude Include="headers\command\LogoutCommand.h" />
+    <ClInclude Include="headers\command\MailboxCommand.h" />
+    <ClInclude Include="headers\command\MessageAllCommand.h" />
+    <ClInclude Include="headers\command\MessageStudentsCommand.h" />
+    <ClInclude Include="headers\command\MessageUserCommand.h" />
+    <ClInclude Include="headers\command\SubmitAssignmentCommand.h" />
+    <ClInclude Include="headers\command\ViewGradesCommand.h" />
+    <ClInclude Include="headers\command\ViewSubmissionsCommand.h" />
+    <ClInclude Include="headers\Constants.h" />
+    <ClInclude Include="headers\Context.h" />
+    <ClInclude Include="headers\courses\Assignment.h" />
+    <ClInclude Include="headers\courses\Course.h" />
+    <ClInclude Include="headers\courses\Grade.h" />
+    <ClInclude Include="headers\courses\Submission.h" />
+    <ClInclude Include="headers\messages\Mailbox.h" />
+    <ClInclude Include="headers\messages\Message.h" />
+    <ClInclude Include="headers\messages\MessageTime.h" />
+    <ClInclude Include="headers\MyString.h" />
+    <ClInclude Include="headers\users\Admin.h" />
+    <ClInclude Include="headers\users\Student.h" />
+    <ClInclude Include="headers\users\Teacher.h" />
+    <ClInclude Include="headers\users\User.h" />
+    <ClInclude Include="headers\users\UserFactory.h" />
+    <ClInclude Include="headers\users\UserRepository.h" />
+    <ClInclude Include="headers\Utils.h" />
+    <ClInclude Include="headers\Vector.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

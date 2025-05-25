@@ -1,0 +1,13 @@
+#pragma once
+#include "Command.h"
+class GradeAssignmentCommand : public Command {
+public:
+	GradeAssignmentCommand(const MyString& buffer, Context& system);
+	void execute() override;
+	MyString getCommand() const override;
+private:
+	MyString getComment() const;
+
+	void saveGrade(const MyString& filename, const Grade& grade);
+};
+
