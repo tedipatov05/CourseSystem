@@ -3,7 +3,7 @@
 Command::Command(const MyString& buffer, Context& ctx)
 	: buffer(buffer), context(ctx) {}
 
-Vector<MyString> Command::split(const MyString& str, const MyString& delimiter) const {
+Vector<MyString> Command::split(const MyString& str, const MyString& delimiter) {
 	Vector<MyString> result;
 	size_t start = 0;
 	size_t end = str.find(delimiter.data(), start);

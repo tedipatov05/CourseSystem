@@ -1,49 +1,5 @@
-﻿  AddStudentCommand.cpp
-  AddTeacherCommand.cpp
-  AddToCourseCommand.cpp
-  AssignHomeworkCommand.cpp
-  ChangePasswordCommand.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\commands\ChangePasswordCommand.cpp(44,16): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
-  ClearMailboxCommand.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\commands\ClearMailboxCommand.cpp(29,42): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  Command.cpp
-  CreateCourseCommand.cpp
-  EnrollCommand.cpp
-  GradeAssignmentCommand.cpp
-  LoginCommand.cpp
-  LogoutCommand.cpp
-  MailboxCommand.cpp
-  MessageAllCommand.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageAllCommand.cpp(37,42): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageAllCommand.cpp(62,42): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  MessageStudentsCommand.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageStudentsCommand.cpp(32,34): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  MessageUserCommand.cpp
-  SubmitAssignmentCommand.cpp
-  ViewGradesCommand.cpp
-  ViewSubmissionsCommand.cpp
-  Context.cpp
-  Generating Code...
-  Compiling...
-  CourseSystem.cpp
-  Assignment.cpp
-  Course.cpp
-  Grade.cpp
-  Submission.cpp
-  Mailbox.cpp
-  Message.cpp
-  MessageTime.cpp
-  MyString.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(317,23): warning C4309: 'return': truncation of constant value
-D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(322,11): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(326,22): warning C4309: 'return': truncation of constant value
+﻿  CourseSystem.cpp
   Admin.cpp
-  Student.cpp
-  Teacher.cpp
-  User.cpp
   UserFactory.cpp
-  UserRepository.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\users\UserRepository.cpp(62,11): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Utils.cpp
   Generating Code...
   CourseSystem.vcxproj -> D:\ФМИ\CourseSystem\x64\Debug\CourseSystem.exe

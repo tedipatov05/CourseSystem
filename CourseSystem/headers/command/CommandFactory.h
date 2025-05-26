@@ -1,26 +1,30 @@
 #pragma once
-#include "Command.h"
+#include "../../headers/command/ViewGradesCommand.h"
+#include "../../headers/command/AddStudentCommand.h"
+#include "../../headers/command/AddStudentCommand.h"
+#include "../../headers/command/AddToCourseCommand.h"
+#include "../../headers/command/ChangePasswordCommand.h"
+#include "../../headers/command/CreateCourseCommand.h"
+#include "../../headers/command/AddTeacherCommand.h"
+#include "../../headers/command/AssignHomeworkCommand.h"
+#include "../../headers/command/ChangePasswordCommand.h"
+#include "../../headers/command/MessageAllCommand.h"
+#include "../../headers/command/MessageStudentsCommand.h"
+#include "../../headers/command/MessageUserCommand.h"
+#include "../../headers/command/ClearMailboxCommand.h"
+#include "../../headers/command/MailboxCommand.h"
+#include "../../headers/command/LogoutCommand.h"
+#include "../../headers/command/LoginCommand.h"
+#include "../../headers/command/GradeAssignmentCommand.h"
+#include "../../headers/command/ViewSubmissionsCommand.h"
+#include "../../headers/command/SubmitAssignmentCommand.h"
+#include "../../headers/command/EnrollCommand.h"
 
-enum class CommandType : MyString {
-	Login = "login",
-	Logout = "logout",
-	AddTeacher = "add_teacher",
-	AddStudent = "add_student",
-	MessageAll = "message_all",
-	ChangePassword = "change_password",
-	CreateCourse = "create_course",
-	EnrollInCourse = "enroll",
-	AddToCourse = "add_to_course",
-	Mailbox = "mailbox",
-	AssignHomework = "assign_homework",
-	MessageStudents = "message_students",
-	Message = "message",
-	SubmitAssignment = "submit_assignment",
-	ViewSubmission = "view_assignment_submissions",
-	GradeAssignment = "grade_assignment",
-	ClearMailbox = "clear_mailbox",
-	Grade = "grade",
 
+class CommandFactory {
+
+public:
+	static Command* createCommand(const MyString& buffer, Context& context);
 };
 
 

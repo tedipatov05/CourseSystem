@@ -1,62 +1,75 @@
-#include "../../headers/command/ViewSubmissionsCommand.h"
+#include "../../headers/command/CommandFactory.h"
+
 #include <iostream>
 
-ViewSubmissionsCommand::ViewSubmissionsCommand(const MyString& buffer, Context& context) :Command(buffer, context) {
 
-}
 
-void ViewSubmissionsCommand::execute() {
-	if (context.user_id == -1){
-		std::cout << "You are not logged in!" << std::endl;
-		return;
+Command* CommandFactory::createCommand(const MyString& buffer, Context& context) {
+	Vector<MyString> tokens = Command::split(buffer, " ");
+
+	if (tokens.is_empty()) {
+		return nullptr;
 	}
-	if (context.user_type != UserType::Teacher) {
-		std::cout << "You do not have permission to view submissions!" << std::endl;
-		return;
+	MyString commandName = tokens[0];
+
+	if (commandName == "change_password") {
+		return new ChangePasswordCommand(buffer, context);
+	}
+	else if (commandName == "add_student") {
+		return new AddStudentCommand(buffer, context);
+	}
+	else if (commandName == "add_to_course") {
+		return new AddToCourseCommand(buffer, context);
+	}
+	else if (commandName == "create_course") {
+		return new CreateCourseCommand(buffer, context);
+	}
+	else if (commandName == "add_teacher") {
+		return new AddTeacherCommand(buffer, context);
+	}
+	else if (commandName == "assign_homework") {
+		return new AssignHomeworkCommand(buffer, context);
+	}
+	else if (commandName == "message_all") {
+		return new MessageAllCommand(buffer, context);
+	}
+	else if (commandName == "message_students") {
+		return new MessageStudentsCommand(buffer, context);
+	}
+	else if (commandName == "message") {
+		return new MessageUserCommand(buffer, context);
+	}
+	else if (commandName == "clear_mailbox") {
+		return new ClearMailboxCommand(buffer, context);
+	}
+	else if (commandName == "mailbox") {
+		return new MailboxCommand(buffer, context);
+	}
+	else if (commandName == "logout") {
+		return new LogoutCommand(buffer, context);
+	}
+	else if (commandName == "login") {
+		return new LoginCommand(buffer, context);
+	}
+	else if (commandName == "grade_assignment") {
+		return new GradeAssignmentCommand(buffer, context);
+	}
+	else if (commandName == "view_assignment_submissions") {
+		return new ViewSubmissionsCommand(buffer, context);
+	}
+	else if (commandName == "grade") {
+		return new ViewGradesCommand(buffer, context);
+	}
+	else if (commandName == "submit_assignment") {
+		return new SubmitAssignmentCommand(buffer, context);
+	}
+	else if (commandName == "enroll") {
+		return new EnrollCommand(buffer, context);
+	}
+	else {
+		std::cout << "Unknown command: " << commandName << std::endl;
+		return nullptr;
 	}
 
-	MyString courseName = getCourseName();
-	MyString homeworkName = getHomeworkName();
-	Assignment* assignment = context.findAssignmentByName(courseName, homeworkName);
-	if (assignment == nullptr) {
-		std::cout << "Assignment not found." << std::endl;
-		return;
-	}
-	User* user = context.user_repo.getUser(context.user_id);
-	if (user == nullptr) {
-		std::cout << "User not found." << std::endl;
-		return;
-	}
-	Course* course = context.findCourseByName(courseName);
-	if (course == nullptr) {
-		std::cout << "Course not found." << std::endl;
-		return;
-	}
-	if (!course->isUserInCourse(user->getId())) {
-		std::cout << "You are not enrolled in this course." << std::endl;
-		return;
-	}
 
-	assignment->printSubmissions();
-
-}
-
-MyString ViewSubmissionsCommand::getCommand() const {
-	return "view_assignments_submissions";
-}
-
-MyString ViewSubmissionsCommand::getCourseName() const {
-	Vector<MyString> tokens = split(buffer, " ");
-	if (tokens.size() < 2) {
-		return "";
-	}
-	return tokens[1];
-}
-
-MyString ViewSubmissionsCommand::getHomeworkName() const {
-	Vector<MyString> tokens = split(buffer, " ");
-	if (tokens.size() < 3) {
-		return "";
-	}
-	return tokens[2];
 }

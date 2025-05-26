@@ -1,4 +1,5 @@
 #include "../headers/Utils.h"
+#include "../headers/Constants.h"
 #include <iostream>
 #pragma warning(disable:4996)
 
@@ -79,4 +80,20 @@ double toDouble(const MyString& str) {
 
 	return result;
 }
+
+//Vector<MyString> split(const MyString& str, const MyString& delimiter) {
+//	Vector<MyString> result;
+//	size_t start = 0;
+//	size_t end = str.find(delimiter.data(), start);
+//
+//	while (end != std::string::npos) {
+//		result.push_back(str.substr(start, end - start));
+//		start = end + delimiter.size();
+//		end = str.find(delimiter.data(), start);
+//	}
+//
+//	result.push_back(str.substr(start, end));
+//	return result;
+//}
+
 

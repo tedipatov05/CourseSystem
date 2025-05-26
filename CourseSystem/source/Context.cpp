@@ -14,7 +14,7 @@ Context::Context(const UserRepository& user_repo, const Vector<Course>& courses)
 	this->user_id = -1;
 }
 Context::Context(const MyString& usersFilename, const MyString& coursesFilename, const MyString& messagesFile, const MyString& usersCoursesFile,
-	const MyString& assignmentsFile, const MyString& submissionsFile, const MyString& gradesFile) {
+	const MyString& assignmentsFile, const MyString& submissionsFile, const MyString& gradesFile) : user_repo(), courses() {
 
 	this->readFromBinaryFile(usersFilename, coursesFilename, messagesFile, usersCoursesFile, assignmentsFile, submissionsFile, gradesFile);
 }

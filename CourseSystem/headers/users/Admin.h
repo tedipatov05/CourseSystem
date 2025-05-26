@@ -8,7 +8,7 @@ class Admin : public User
 {
 public:
 	Admin() = default;
-	Admin(const MyString& name, const MyString& email, const MyString& password, int id);
+	Admin(const MyString& first_name, const MyString& last_name, const MyString& password, int id);
 
 
 	UserType role() const override;

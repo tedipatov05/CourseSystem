@@ -134,6 +134,7 @@
     <ClCompile Include="source\commands\ChangePasswordCommand.cpp" />
     <ClCompile Include="source\commands\ClearMailboxCommand.cpp" />
     <ClCompile Include="source\commands\Command.cpp" />
+    <ClCompile Include="source\commands\CommandFactory.cpp" />
     <ClCompile Include="source\commands\CreateCourseCommand.cpp" />
     <ClCompile Include="source\commands\EnrollCommand.cpp" />
     <ClCompile Include="source\commands\GradeAssignmentCommand.cpp" />

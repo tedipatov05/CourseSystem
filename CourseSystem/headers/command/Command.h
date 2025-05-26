@@ -10,7 +10,7 @@ public:
 	virtual void execute() = 0;
 	virtual ~Command() = default;
 
-	Vector<MyString> split(const MyString& str, const MyString& delimiter) const;
+	static Vector<MyString> split(const MyString& str, const MyString& delimiter);
 
 	MyString buffer;
 	Context& context;

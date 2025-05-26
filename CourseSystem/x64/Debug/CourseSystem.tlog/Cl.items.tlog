@@ -5,6 +5,7 @@ D:\ФМИ\CourseSystem\CourseSystem\source\commands\AssignHomeworkCommand.cpp;D:
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\ChangePasswordCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\ChangePasswordCommand.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\ClearMailboxCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\ClearMailboxCommand.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\Command.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\Command.obj
+D:\ФМИ\CourseSystem\CourseSystem\source\commands\CommandFactory.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\CommandFactory.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\CreateCourseCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\CreateCourseCommand.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\EnrollCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\EnrollCommand.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\GradeAssignmentCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\GradeAssignmentCommand.obj
