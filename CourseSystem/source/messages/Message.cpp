@@ -25,6 +25,10 @@ void Message::readFromFile(std::ifstream& ifs) {
 	this->_sender.readFromBinaryFile(ifs);
 	this->time.readFromBinaryFile(ifs);
 
+	if (!this->_content.size() || !this->_sender.size()){
+		return;
+	}
+
 	size_t size;
 	ifs.read((char*)(&size), sizeof(size));
 	for (size_t i = 0; i < size; ++i) {
@@ -50,5 +54,15 @@ void Message::writeToFile(std::ofstream& ofs) const {
 
 const Vector<MyString>& Message::receivers() const {
 	return this->_receivers;
+}
+
+void Message::removeReceiver(const MyString& receiver) {
+	int ind = this->_receivers.index_of(receiver);
+	if (ind != -1) {
+		this->_receivers.remove_at(ind);
+	}
+	else {
+		std::cout << "Receiver not found: " << receiver << std::endl;
+	}
 }
 

@@ -19,6 +19,7 @@ public:
 
 	void readFromFile(std::ifstream& ifs);
 	void writeToFile(std::ofstream& ofs) const;
+	void removeReceiver(const MyString& receiver);
 
 private:
 

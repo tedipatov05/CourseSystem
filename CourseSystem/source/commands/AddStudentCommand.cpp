@@ -12,6 +12,11 @@ MyString AddStudentCommand::getCommand() const {
 }
 
 void AddStudentCommand::execute(){
+	if (context.user_type != UserType::Admin) {
+		std::cout << "You don't have permission to add student" << std::endl;
+		return;
+	}
+
 	User* user = new Student(getFirstNameFromBuffer(), getLastNameFromBuffer(), getPasswordFromBuffer(), Context::next_user_id);
 	Context::next_user_id++;
 	context.user_repo.addUser(user);

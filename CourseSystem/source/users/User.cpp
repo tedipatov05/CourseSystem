@@ -33,8 +33,11 @@ const MyString& User::getLastName() const {
 }
 
 MyString User::username() const {
+	MyString username = this->first_name;
+	username += " ";
+	username += this->last_name;
 
-	return this->first_name + " " + this->last_name;
+	return username;
 }
 
 int User::getId() const {

@@ -63,10 +63,11 @@ MyString& MyString::operator+=(const MyString& str) {
 	}
 
 	if (this->size() + str.size() + 1 > this->capacity()) {
-		this->reserve(this->size() + str.size());
+		this->reserve(this->capacity()*2);
 	}
 
 	std::strncat(this->_data, str.data(), str.size());
+	this->_size += str.size();
 
 	return *this;
 

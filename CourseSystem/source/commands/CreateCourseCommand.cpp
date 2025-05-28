@@ -42,5 +42,5 @@ void CreateCourseCommand::execute() {
 	ofs.close();
 	
 
-	std::cout << "Successfully created course: " << course->getCourseName();
+	std::cout << "Successfully created course: " << course->getCourseName() << std::endl;
 }

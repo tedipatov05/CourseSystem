@@ -6,6 +6,8 @@ MyString LoginCommand::getCommand() const{
 	return "login";
 }
 
+
+
 void LoginCommand::execute() {
 	if (this->context.user_id != -1) {
 		std::cout << "You are already logged in!" << std::endl;
@@ -35,13 +37,13 @@ LoginCommand::LoginCommand(const MyString& buffer, Context& context): Command(bu
 }
 
 int LoginCommand::getIdFromBuffer() const {
-	MyString id = buffer.substr(0, buffer.find(" ", 0));
+	MyString id = split(buffer, " ")[1];
 
 	return toInt(id);
 }
 
 MyString LoginCommand::getPasswordFromBuffer() const {
-	MyString password = buffer.substr(buffer.find(" ", 0) + 1, buffer.find() - buffer.find(" ", 0));
+	MyString password = split(buffer, " ")[2];
 
 	return password;
 }

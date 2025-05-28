@@ -46,7 +46,7 @@ void ViewGradesCommand::loadGrades(const MyString& filename){
 		std::cout << "Failed to open file: " << filename << std::endl;
 		return;
 	}
-	while (ifs.eof()) {
+	while (!ifs.eof()) {
 		Grade grade;
 		grade.readFromBinaryFile(ifs);
 

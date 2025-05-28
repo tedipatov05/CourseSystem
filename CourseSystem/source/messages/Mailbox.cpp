@@ -121,6 +121,10 @@ const Message& Mailbox::operator[](size_t index) const {
 	return this->messages[index];
 }
 
+Message& Mailbox::operator[](size_t index) {
+	return this->messages[index];
+}
+
 void Mailbox::clear() {
 	free();
 	this->messages = new Message[INITIAL_SIZE];

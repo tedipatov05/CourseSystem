@@ -54,6 +54,10 @@ bool Course::isUserInCourse(int userId) const {
 	return false;
 }
 
+const Vector<int>& Course::getUsers() const {
+	return this->users;
+}
+
 const Vector<Assignment>& Course::getAssignments() const {
 	return this->_assignments;
 }

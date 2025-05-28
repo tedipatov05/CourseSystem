@@ -30,7 +30,7 @@ MyString ChangePasswordCommand::getCommand() const {
 }
 
 
-// TODO: check if it works
+// TODO: check if it works [Yes]
 void ChangePasswordCommand::modifyUserInFile(const MyString& filename, const User* user) const {
 	std::ifstream stream(filename.data(), std::ios::binary);
 	if (!stream.is_open()) {
@@ -62,12 +62,14 @@ void ChangePasswordCommand::modifyUserInFile(const MyString& filename, const Use
 
 	stream.close();
 
-	std::ofstream ofs(filename.data(), std::ios::binary | std::ios::app);
+	std::ofstream ofs(filename.data(), std::ios::binary | std::ios::in);
 	if (!ofs.is_open()) {
 		std::cout << "Failed to open file for writing: " << filename << std::endl;
 		return;
 	}
+	int offset = std::ios::cur - pos;
 	ofs.seekp(pos, std::ios::beg);
+
 	user->writeToBinaryFile(ofs);
 
 

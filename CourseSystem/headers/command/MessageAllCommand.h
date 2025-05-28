@@ -16,6 +16,7 @@ private:
 	MyString buffer;*/
 
 	MyString getMessageContentFromBuffer() const;
-	void setUsernames() const;
+	void setUsernames();
+	void saveMessage(const MyString& filename, const Message& message) const;
 };
 

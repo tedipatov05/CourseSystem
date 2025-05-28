@@ -21,16 +21,17 @@ void MessageStudentsCommand::execute() {
 		return;
 	}
 
-	Vector<MyString> receivers = getReceivers();
+	Vector<MyString> receivers = getReceivers(*course);
 	if (receivers.is_empty()) {
 		std::cout << "No valid receivers specified." << std::endl;
 		return;
 	}
 
 	Message* message = new Message(content, receivers, context.user_repo.getUser(context.user_id)->username());
+
 	for (size_t i = 0; i < context.user_repo.getSize(); i++){
 		int userId = context.user_repo[i].getId();
-		if (course->isUserInCourse(userId)) {
+		if (course->isUserInCourse(userId) && context.user_repo[i].role() == UserType::Student) {
 			context.user_repo.getUser(userId)->receiveMessage(*message);
 		}
 	}
@@ -61,12 +62,15 @@ MyString MessageStudentsCommand::getCourseName() const {
 	return tokens[1];
 }
 
-Vector<MyString> MessageStudentsCommand::getReceivers() const {
-	Vector<MyString> tokens = split(buffer, " ");
+Vector<MyString> MessageStudentsCommand::getReceivers(const Course& course) const {
 	Vector<MyString> receivers;
-
-	for (size_t i = 2; i < tokens.size(); i++) {
-		receivers.push_back(tokens[i]);
+	
+	for (size_t i = 0; i < course.getUsers().size(); i++) {
+		User* user = context.user_repo.getUser(course.getUsers()[i]);
+		if (!user || user->role() != UserType::Student) {
+			continue; 
+		}
+		receivers.push_back(user->username());
 	}
 
 	return receivers;

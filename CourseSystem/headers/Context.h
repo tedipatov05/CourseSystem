@@ -8,12 +8,6 @@ class Context
 {
 public:
 
-	Context();
-	Context(const UserRepository& user_repo, const Vector<Course>& courses);
-	Context(const MyString& usersFilename, const MyString& coursesFilename, const MyString& messagesFile , const MyString& usersCoursesFile, 
-		const MyString& assignmentsFile, const MyString& submissionsFile, const MyString& gradesFile);
-
-
 	UserRepository user_repo;
 	Vector<Course> courses;
 	UserType user_type;
@@ -36,5 +30,21 @@ public:
 	void readAssignments(const MyString& filename);
 	void readSubmissions(const MyString& filename);
 	void readGrades(const MyString& filename);
+	void setNextUserId();
+
+	Context(const Context& other) = delete;
+	Context& operator=(const Context& other) = delete;
+
+	static Context* getInstance();
+
+protected:
+
+	static Context* instance;
+
+private:
+	Context();
+	Context(const UserRepository& user_repo, const Vector<Course>& courses);
+	Context(const MyString& usersFilename, const MyString& coursesFilename, const MyString& messagesFile, const MyString& usersCoursesFile,
+		const MyString& assignmentsFile, const MyString& submissionsFile, const MyString& gradesFile);
 };
 

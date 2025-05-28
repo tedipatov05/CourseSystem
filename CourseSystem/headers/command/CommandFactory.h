@@ -19,6 +19,7 @@
 #include "../../headers/command/ViewSubmissionsCommand.h"
 #include "../../headers/command/SubmitAssignmentCommand.h"
 #include "../../headers/command/EnrollCommand.h"
+#include "../../headers/command/ViewAssignmentsCommand.h"
 
 
 class CommandFactory {

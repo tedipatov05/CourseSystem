@@ -8,7 +8,7 @@ public:
 	MyString getCommand() const override;
 
 private:
-	Vector<MyString> getReceivers() const;
+	Vector<MyString> getReceivers(const Course& course) const;
 	MyString getCourseName() const;
 	MyString getContent() const;
 	void saveMessage(const MyString& filename, const Message& message) const;

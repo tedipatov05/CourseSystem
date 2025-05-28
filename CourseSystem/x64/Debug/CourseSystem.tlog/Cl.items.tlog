@@ -16,6 +16,7 @@ D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageAllCommand.cpp;D:\Ф�
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageStudentsCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\MessageStudentsCommand.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageUserCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\MessageUserCommand.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\SubmitAssignmentCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\SubmitAssignmentCommand.obj
+D:\ФМИ\CourseSystem\CourseSystem\source\commands\ViewAssignmentsCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\ViewAssignmentsCommand.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\ViewGradesCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\ViewGradesCommand.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\ViewSubmissionsCommand.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\ViewSubmissionsCommand.obj
 D:\ФМИ\CourseSystem\CourseSystem\source\Context.cpp;D:\ФМИ\CourseSystem\CourseSystem\x64\Debug\Context.obj

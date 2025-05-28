@@ -16,6 +16,7 @@ public:
 
 	const MyString getCourseName() const;
 	const Vector<Assignment>& getAssignments() const;
+	const Vector<int>& getUsers() const;
 
 	void writeToBinaryFile(std::ofstream& ofs) const;
 	void readFromBinaryFile(std::ifstream& ifs);

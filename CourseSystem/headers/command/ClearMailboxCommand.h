@@ -6,6 +6,8 @@ public:
 	void execute() override;
 	MyString getCommand() const override;
 private:
-	void clearFile(const MyString& filename, int userId) const;
+	Mailbox _mailbox;
+	void clearFile(const MyString& filename, const MyString& username) const;
+	void loadMessages(const MyString& filename);
 };
 

@@ -49,6 +49,7 @@ public:
 	void insert_at(size_t index, const T& value);
 	void insert_range(size_t index, const T* values, size_t size);
 	void swap(Vector& other);
+	size_t index_of(const T& value) const;
 
 	const T* data() const;
 	size_t size() const;
@@ -181,6 +182,16 @@ void Vector<T>::shrink_to_fit() {
 		this->_data = temp;
 		this->_capacity = this->size();
 	}
+}
+
+template <typename T>
+size_t Vector<T>::index_of(const T& value) const {
+	for (size_t i = 0; i < this->size(); i++) {
+		if (this->_data[i] == value) {
+			return i;
+		}
+	}
+	return -1;
 }
 
 template <typename T>

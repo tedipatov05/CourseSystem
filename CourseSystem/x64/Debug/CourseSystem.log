@@ -1,5 +1,3 @@
-﻿  CourseSystem.cpp
-  Admin.cpp
-  UserFactory.cpp
-  Generating Code...
+﻿  ChangePasswordCommand.cpp
+D:\ФМИ\CourseSystem\CourseSystem\source\commands\ChangePasswordCommand.cpp(44,16): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
   CourseSystem.vcxproj -> D:\ФМИ\CourseSystem\x64\Debug\CourseSystem.exe

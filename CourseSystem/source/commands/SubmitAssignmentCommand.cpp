@@ -40,7 +40,7 @@ void SubmitAssignmentCommand::execute() {
 	Submission* submission = new Submission(user->username(), content, courseName, homeworkName, user->getId());
 	assignment->addSubmission(*submission);
 
-	this->saveSubmission(ASSIGNMENTS_FILE, *submission);
+	this->saveSubmission(SUBMISSIONS_FILE, *submission);
 
 	delete submission;
 

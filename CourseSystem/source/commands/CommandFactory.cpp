@@ -66,6 +66,9 @@ Command* CommandFactory::createCommand(const MyString& buffer, Context& context)
 	else if (commandName == "enroll") {
 		return new EnrollCommand(buffer, context);
 	}
+	else if (commandName == "view_assignments"){
+		return new ViewAssignmentsCommand(buffer, context);
+	}
 	else {
 		std::cout << "Unknown command: " << commandName << std::endl;
 		return nullptr;

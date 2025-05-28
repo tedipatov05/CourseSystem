@@ -145,6 +145,7 @@
     <ClCompile Include="source\commands\MessageStudentsCommand.cpp" />
     <ClCompile Include="source\commands\MessageUserCommand.cpp" />
     <ClCompile Include="source\commands\SubmitAssignmentCommand.cpp" />
+    <ClCompile Include="source\commands\ViewAssignmentsCommand.cpp" />
     <ClCompile Include="source\commands\ViewGradesCommand.cpp" />
     <ClCompile Include="source\commands\ViewSubmissionsCommand.cpp" />
     <ClCompile Include="source\Context.cpp" />
@@ -184,6 +185,7 @@
     <ClInclude Include="headers\command\MessageStudentsCommand.h" />
     <ClInclude Include="headers\command\MessageUserCommand.h" />
     <ClInclude Include="headers\command\SubmitAssignmentCommand.h" />
+    <ClInclude Include="headers\command\ViewAssignmentsCommand.h" />
     <ClInclude Include="headers\command\ViewGradesCommand.h" />
     <ClInclude Include="headers\command\ViewSubmissionsCommand.h" />
     <ClInclude Include="headers\Constants.h" />

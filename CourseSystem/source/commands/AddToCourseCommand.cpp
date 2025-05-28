@@ -23,6 +23,11 @@ void AddToCourseCommand::execute() {
 	MyString courseName = getCourseNameFromBuffer();
 	int userId = toInt(getUserIdFromBuffer());
 
+	if (context.user_type != UserType::Teacher && context.user_type != UserType::Admin){
+		std::cout << "You do not have permission to add users to courses!" << std::endl;
+		return;
+	}
+
 	User* userToAdd = context.user_repo.getUser(userId);
 	if (userToAdd == nullptr) {
 		std::cout << "User not found!" << std::endl;
@@ -68,7 +73,8 @@ void AddToCourseCommand::saveAddedUser(const MyString& filename, const MyString&
 		return;
 	}
 
-	ofs.write((const char*)&userId, sizeof(userId));
+	int id = userId;
+	ofs.write((const char*)&id, sizeof(id));
 	courseName.writeToBinaryFile(ofs);
 	ofs.close();
 

@@ -29,7 +29,18 @@ void AssignHomeworkCommand::execute() {
 		std::cout << "Course not found!" << std::endl;
 		return;
 	}
+
+	if (!course->isUserInCourse(context.user_id)){
+		std::cout << "You are not enrolled in this course." << std::endl;
+		return;
+	}
+
 	Assignment* assignment = new Assignment(homeworkName, course->getCourseName());
+	if (!assignment){
+		std::cout << "Failed to create assignment." << std::endl;
+		return;
+	}
+
 	course->addAssignment(*assignment);
 
 	this->saveAssignment(ASSIGNMENTS_FILE, *assignment);
@@ -59,7 +70,7 @@ MyString AssignHomeworkCommand::getCourseName() const {
 
 MyString AssignHomeworkCommand::getHomeworkName() const {
 	Vector<MyString> tokens = split(buffer, " ");
-	if (tokens.size() < 4) {
+	if (tokens.size() < 3) {
 		return "";
 	}
 	return tokens[2];
