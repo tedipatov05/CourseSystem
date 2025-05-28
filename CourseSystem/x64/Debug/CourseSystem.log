@@ -1,3 +1,5 @@
-﻿  ChangePasswordCommand.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\commands\ChangePasswordCommand.cpp(44,16): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+﻿  MyString.cpp
+D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(318,23): warning C4309: 'return': truncation of constant value
+D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(323,11): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(327,22): warning C4309: 'return': truncation of constant value
   CourseSystem.vcxproj -> D:\ФМИ\CourseSystem\x64\Debug\CourseSystem.exe

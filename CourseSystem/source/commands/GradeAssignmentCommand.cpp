@@ -50,6 +50,20 @@ void GradeAssignmentCommand::execute() {
 		}
 	}
 
+	User* teacher = context.user_repo.getUser(context.user_id);
+	User* student = context.user_repo.getUser(studentId);
+	MyString content = teacher->username();
+	content += " has graded your assignment ";
+	content += assignmentName;
+	content += " in course ";
+	content += courseName;
+
+	Vector<MyString> receivers;
+	receivers.push_back(student->username());
+	Message msg(content, receivers, teacher->username());
+	student->receiveMessage(msg);
+	saveMessageInFile(MESSAGES_FILE, msg);
+
 	saveGrade(GRADES_FILE, *newGrade);
 
 	delete newGrade;
@@ -65,6 +79,18 @@ void GradeAssignmentCommand::saveGrade(const MyString& filename, const Grade& gr
 	}
 
 	grade.writeToBinaryFile(ofs);
+
+}
+
+void GradeAssignmentCommand::saveMessageInFile(const MyString& filename, const Message& message) const {
+	std::ofstream file(filename.data(), std::ios::binary | std::ios::app);
+	if (!file.is_open()) {
+		std::cout << "Failed to open file: " << filename << std::endl;
+		return;
+	}
+
+	message.writeToFile(file);
+	file.close();
 
 }
 

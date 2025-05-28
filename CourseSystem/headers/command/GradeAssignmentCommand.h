@@ -9,5 +9,6 @@ private:
 	MyString getComment() const;
 
 	void saveGrade(const MyString& filename, const Grade& grade);
+	void saveMessageInFile(const MyString& filename, const Message& message) const;
 };
 
