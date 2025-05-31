@@ -1,6 +1,8 @@
-#include "../headers/Context.h"
+// Teodor Patov 2MI0600491
 
+#include "../headers/Context.h"
 #include <iostream>
+#include "../headers/users/Admin.h"
 
 
 int Context::next_user_id = 100;
@@ -53,6 +55,8 @@ void Context::readMessages(const MyString& filename){
 		return;
 	}
 
+	ifs.seekg(std::ios::beg);
+
 	while (!ifs.eof()) {
 		Message message;
 		message.readFromFile(ifs);
@@ -81,6 +85,8 @@ void Context::readCourses(const MyString& filename) {
 		return;
 	}
 
+	ifs.seekg(std::ios::beg);
+
 	while (!ifs.eof()) {
 		Course course;
 		course.readFromBinaryFile(ifs);
@@ -99,6 +105,8 @@ void Context::readUserCourses(const MyString& filename) {
 	if (!ifs.is_open()) {
 		return;
 	}
+
+	ifs.seekg(std::ios::beg);
 
 	while (!ifs.eof()) {
 		int userId = 0;
@@ -125,6 +133,8 @@ void Context::readAssignments(const MyString& filename){
 		return;
 	}
 
+	ifs.seekg(std::ios::beg);
+
 	while (!ifs.eof()) {
 		Assignment assignment;
 		assignment.readFromBinaryFile(ifs);
@@ -149,6 +159,8 @@ void Context::readSubmissions(const MyString& filename){
 		return;
 	}
 
+	ifs.seekg(std::ios::beg);
+
 	while (!ifs.eof()) {
 		Submission submission;
 		submission.readFromBinaryFile(ifs);
@@ -169,6 +181,8 @@ void Context::readGrades(const MyString& filename){
 	if (!ifs.is_open()) {
 		return;
 	}
+
+	ifs.seekg(std::ios::beg);
 
 	while (!ifs.eof()) {
 		Grade grade;
@@ -196,8 +210,6 @@ void Context::setNextUserId(){
 	Context::next_user_id = maxId + 1;
 	
 }
-
-
 
 Course* Context::findCourseByName(const MyString& courseName) const {
 	for (int i = 0; i < this->courses.size(); i++) {

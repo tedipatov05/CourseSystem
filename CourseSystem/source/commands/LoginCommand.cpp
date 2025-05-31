@@ -1,5 +1,6 @@
-#include "../../headers/command/LoginCommand.h"
+// Teodor Patov 2MI0600491
 
+#include "../../headers/command/LoginCommand.h"
 #include <iostream>
 
 MyString LoginCommand::getCommand() const{

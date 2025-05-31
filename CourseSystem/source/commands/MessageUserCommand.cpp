@@ -1,5 +1,6 @@
-#include "../../headers/command/MessageUserCommand.h"
+// Teodor Patov 2MI0600491
 
+#include "../../headers/command/MessageUserCommand.h"
 #include <iostream>
 
 MessageUserCommand::MessageUserCommand(const MyString& buffer, Context& context) : Command(buffer, context){

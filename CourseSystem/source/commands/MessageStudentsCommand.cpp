@@ -1,5 +1,6 @@
-#include "../../headers/command/MessageStudentsCommand.h"
+// Teodor Patov 2MI0600491
 
+#include "../../headers/command/MessageStudentsCommand.h"
 #include <iostream>
 
 MessageStudentsCommand::MessageStudentsCommand(const MyString& buffer, Context& context) : Command(buffer, context){

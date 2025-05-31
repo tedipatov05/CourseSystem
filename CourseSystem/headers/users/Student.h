@@ -1,6 +1,8 @@
+
+// Teodor Patov 2MI0600491
+
 #pragma once
 
-//#include "CourseRepository.h"
 #include "User.h"
 #include "../Vector.hpp"
 #include "../courses/Course.h"

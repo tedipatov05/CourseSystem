@@ -1,5 +1,7 @@
-#include "../../headers/command/ViewAssignmentsCommand.h"
 
+// Teodor Patov 2MI0600491
+
+#include "../../headers/command/ViewAssignmentsCommand.h"
 #include <iostream>
 
 ViewAssignmentsCommand::ViewAssignmentsCommand(const MyString& buffer, Context& context) :Command(buffer, context) {

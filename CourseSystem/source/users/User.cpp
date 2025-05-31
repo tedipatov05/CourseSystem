@@ -1,3 +1,6 @@
+
+// Teodor Patov 2MI0600491
+
 #include "../../headers/users/User.h"
 
 User::User() : User("", "", "", 0) {}

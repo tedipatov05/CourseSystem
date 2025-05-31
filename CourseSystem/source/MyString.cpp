@@ -1,3 +1,6 @@
+
+// Teodor Patov 2MI0600491
+
 #include "../headers/MyString.h"
 #include "../headers/Utils.h"
 #include <istream>

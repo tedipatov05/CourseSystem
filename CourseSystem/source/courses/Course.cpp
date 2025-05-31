@@ -1,3 +1,5 @@
+// Teodor Patov 2MI0600491
+
 #include "../../headers/courses/Course.h"
 
 
@@ -23,26 +25,12 @@ void Course::writeToBinaryFile(std::ofstream& ofs) const {
 	this->_courseName.writeToBinaryFile(ofs);
 	this->_password.writeToBinaryFile(ofs);
 
-	/*size_t size = this->_assignments.size();
-	ofs.write((const char*)(&size), sizeof(size));
-	for (size_t i = 0; i < size; ++i) {
-		this->_assignments[i].writeToBinaryFile(ofs);
-	}*/
 }
 
 void Course::readFromBinaryFile(std::ifstream& ifs){
 	
 	this->_courseName.readFromBinaryFile(ifs);
 	this->_password.readFromBinaryFile(ifs);
-
-	/*size_t size = 0;
-	ifs.read((char*)(&size), sizeof(size));
-
-	for (size_t i = 0; i < size; ++i) {
-		Assignment assignment;
-		assignment.readFromBinaryFile(ifs);
-		this->_assignments.push_back(assignment);
-	}*/
 }
 
 bool Course::isUserInCourse(int userId) const {

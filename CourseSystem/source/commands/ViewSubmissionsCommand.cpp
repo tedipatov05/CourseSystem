@@ -1,3 +1,6 @@
+
+// Teodor Patov 2MI0600491
+
 #include "../../headers/command/ViewSubmissionsCommand.h"
 #include <iostream>
 

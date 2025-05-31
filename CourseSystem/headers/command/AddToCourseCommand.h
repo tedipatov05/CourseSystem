@@ -1,3 +1,6 @@
+
+// Teodor Patov 2MI0600491
+
 #pragma once
 #include "Command.h"
 
@@ -11,8 +14,6 @@ public:
 	MyString getCommand() const override;
 
 private:
-	/*Context& context;
-	MyString buffer;*/
 
 	MyString getCourseNameFromBuffer() const;
 	MyString getUserIdFromBuffer() const;

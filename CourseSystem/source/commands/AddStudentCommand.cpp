@@ -1,3 +1,5 @@
+// Teodor Patov 2MI0600491
+
 #include "../../headers/command/AddStudentCommand.h"
 
 #include <iostream>

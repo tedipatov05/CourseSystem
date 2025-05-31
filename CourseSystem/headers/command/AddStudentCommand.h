@@ -1,3 +1,6 @@
+
+// Teodor Patov 2MI0600491
+
 #pragma once
 #include "Command.h"
 #include "../Context.h"
@@ -10,9 +13,7 @@ public:
 	void execute() override;
 
 private:
-	/*Context& context;
-	MyString buffer;*/
-
+	
 	MyString getPasswordFromBuffer() const;
 	MyString getFirstNameFromBuffer() const;
 	MyString getLastNameFromBuffer() const;

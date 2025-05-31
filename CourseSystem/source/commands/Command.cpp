@@ -1,3 +1,6 @@
+// Teodor Patov 2MI0600491
+
+
 #include "../../headers/command/Command.h"
 
 Command::Command(const MyString& buffer, Context& ctx)

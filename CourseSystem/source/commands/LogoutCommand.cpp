@@ -1,5 +1,6 @@
-#include "../../headers/command/LogoutCommand.h"
+// Teodor Patov 2MI0600491
 
+#include "../../headers/command/LogoutCommand.h"
 #include <iostream>
 
 LogoutCommand::LogoutCommand(const MyString& buffer, Context& system) : Command(buffer, system) {

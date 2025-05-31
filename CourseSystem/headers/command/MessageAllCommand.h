@@ -1,3 +1,6 @@
+
+// Teodor Patov 2MI0600491
+
 #pragma once
 #include "Command.h"
 #include "../Context.h"
@@ -12,8 +15,7 @@ public:
 	static Vector<MyString> usernames;
 
 private:
-	/*Context& context;
-	MyString buffer;*/
+	
 
 	MyString getMessageContentFromBuffer() const;
 	void setUsernames();

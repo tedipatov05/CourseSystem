@@ -1,5 +1,7 @@
-#include "../../headers/command/ViewGradesCommand.h"
 
+// Teodor Patov 2MI0600491
+
+#include "../../headers/command/ViewGradesCommand.h"
 #include <iostream>
 
 ViewGradesCommand::ViewGradesCommand(const MyString& buffer, Context& system) : Command(buffer, system) {

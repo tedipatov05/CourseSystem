@@ -1,4 +1,6 @@
-#pragma once
+
+// Teodor Patov 2MI0600491
+
 #pragma once
 #include <fstream>
 

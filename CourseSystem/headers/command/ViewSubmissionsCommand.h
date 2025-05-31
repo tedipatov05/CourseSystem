@@ -1,3 +1,6 @@
+
+// Teodor Patov 2MI0600491
+
 #pragma once
 #include "Command.h"
 #include "../Context.h"
@@ -12,7 +15,6 @@ private:
 
 	MyString getCourseName() const;
 	MyString getHomeworkName() const;
-	/*void printSubmissions(const MyString& courseName, const MyString& homeworkName) const;
-	void printSubmission(const Submission& submission) const;*/
+	
 };
 

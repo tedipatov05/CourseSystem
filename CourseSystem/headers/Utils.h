@@ -1,3 +1,6 @@
+
+// Teodor Patov 2MI0600491
+
 #pragma once
 #include "MyString.h"
 #include "users/UserFactory.h"
@@ -10,7 +13,6 @@ size_t dataToAllocByStringLen(size_t size);
 int toInt(const MyString& str);
 double toDouble(const MyString& str);
 
-//Vector<MyString> split(const MyString& str, const MyString& delimiter);
 
 
 
