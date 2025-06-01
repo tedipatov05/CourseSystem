@@ -8,6 +8,7 @@
 class UserRepository {
 public:
 	UserRepository();
+	UserRepository(const MyString& filename);
 	UserRepository(const UserRepository& other);
 	UserRepository& operator=(const UserRepository& other);
 	~UserRepository();

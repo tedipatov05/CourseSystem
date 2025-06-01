@@ -15,6 +15,15 @@ UserRepository::UserRepository(const UserRepository& other) {
 	this->copyDynamicMemory(other);
 }
 
+UserRepository::UserRepository(const MyString& filename){
+	this->_capacity = INITIAL_SIZE;
+	this->_size = 0;
+	this->_users = new User * [this->_capacity];
+	this->readFromBinaryFile(filename);
+	
+}
+
+
 UserRepository& UserRepository::operator=(const UserRepository& other) {
 	if (this != &other) {
 		free();
@@ -52,7 +61,11 @@ void UserRepository::removeUser(const MyString& username) {
 	}
 
 	delete this->_users[indexToDelete];
+
 	// TODO: shift the elements to the left
+	for (size_t i = indexToDelete; i < this->getSize() - 1; i++){
+		this->_users[i] = this->_users[i + 1];
+	}
 
 
 }
@@ -107,6 +120,9 @@ void UserRepository::readFromBinaryFile(const MyString& filename) {
 		std::cout << "Error opening file: " << filename << std::endl;
 		return;
 	}
+
+	free();
+	this->_users = new User * [INITIAL_SIZE];
 
 	while (!ifs.eof()) {
 		UserType type;

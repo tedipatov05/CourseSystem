@@ -39,6 +39,7 @@ Context::Context(const MyString& usersFilename, const MyString& coursesFilename,
 
 void Context::readFromBinaryFile(const MyString& usersFilename, const MyString& coursesFilename, const MyString& messagesFile, const MyString& usersCoursesFile, 
 	const MyString& assignmentsFile, const MyString& submissionsFile, const MyString& gradesFile) {
+
 	this->user_repo.readFromBinaryFile(usersFilename);
 	this->readCourses(coursesFilename);
 	this->readMessages(messagesFile);

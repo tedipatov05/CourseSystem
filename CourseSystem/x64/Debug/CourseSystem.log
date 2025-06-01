@@ -1,10 +1,5 @@
 ﻿  Context.cpp
   CourseSystem.cpp
-  MyString.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(321,23): warning C4309: 'return': truncation of constant value
-D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(326,11): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(330,22): warning C4309: 'return': truncation of constant value
-  Utils.cpp
   AddStudentCommand.cpp
   AddTeacherCommand.cpp
   AddToCourseCommand.cpp
@@ -26,27 +21,19 @@ D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageAllCommand.cpp(72,34)
   MessageStudentsCommand.cpp
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageStudentsCommand.cpp(34,34): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageStudentsCommand.cpp(35,59): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
-  Compiling...
   MessageUserCommand.cpp
   SubmitAssignmentCommand.cpp
+  Generating Code...
+  Compiling...
   ViewAssignmentsCommand.cpp
   ViewGradesCommand.cpp
   ViewSubmissionsCommand.cpp
-  Assignment.cpp
   Course.cpp
-  Grade.cpp
-  Submission.cpp
-  Mailbox.cpp
-  Message.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\messages\Message.cpp(63,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  MessageTime.cpp
   Admin.cpp
   Student.cpp
   Teacher.cpp
-  User.cpp
   UserFactory.cpp
   UserRepository.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\users\UserRepository.cpp(63,11): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+D:\ФМИ\CourseSystem\CourseSystem\source\users\UserRepository.cpp(76,11): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   Generating Code...
   CourseSystem.vcxproj -> D:\ФМИ\CourseSystem\x64\Debug\CourseSystem.exe
