@@ -7,9 +7,6 @@
 SubmitAssignmentCommand::SubmitAssignmentCommand(const MyString& buffer, Context& ctx) : Command(buffer, ctx) {
 
 }
-MyString SubmitAssignmentCommand::getCommand() const {
-	return "submit_assignment";
-}
 
 void SubmitAssignmentCommand::execute() {
 	if (this->context.user_id == -1) {

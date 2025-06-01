@@ -8,7 +8,6 @@ class MessageStudentsCommand : public Command {
 public:
 	MessageStudentsCommand(const MyString& buffer, Context& context);
 	void execute() override;
-	MyString getCommand() const override;
 
 private:
 	Vector<MyString> getReceivers(const Course& course) const;

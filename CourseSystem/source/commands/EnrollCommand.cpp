@@ -8,10 +8,6 @@ EnrollCommand::EnrollCommand(const MyString& buffer, Context& ctx) : Command(buf
 	
 }
 
-MyString EnrollCommand::getCommand() const {
-	return "enroll";
-}
-
 void EnrollCommand::execute() {
 	if (context.user_id == -1) {
 		std::cout << "You are not logged in!" << std::endl;

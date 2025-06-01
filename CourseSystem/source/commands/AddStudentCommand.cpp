@@ -9,10 +9,6 @@
 AddStudentCommand::AddStudentCommand(const MyString& buffer, Context& system) : Command(buffer, system){
 }
 
-MyString AddStudentCommand::getCommand() const {
-	return "add_student";
-}
-
 void AddStudentCommand::execute(){
 	if (context.user_type != UserType::Admin) {
 		std::cout << "You don't have permission to add student" << std::endl;

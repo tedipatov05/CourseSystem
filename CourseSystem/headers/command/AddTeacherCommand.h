@@ -8,7 +8,6 @@ class AddTeacherCommand : public Command
 {
 public:
 	AddTeacherCommand(const MyString& buffer, Context& system);
-	MyString getCommand() const override;
 	void execute() override;
 
 private:

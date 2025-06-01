@@ -9,7 +9,6 @@ class MessageAllCommand : public Command {
 
 public:
 	void execute() override;
-	MyString getCommand() const override;
 	MessageAllCommand(const MyString& buffer, Context& system);
 
 	static Vector<MyString> usernames;

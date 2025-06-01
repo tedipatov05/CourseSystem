@@ -27,12 +27,6 @@ void ChangePasswordCommand::execute() {
 	}
 }
 
-MyString ChangePasswordCommand::getCommand() const {
-	return "change_password";
-}
-
-
-// TODO: check if it works [Yes]
 void ChangePasswordCommand::modifyUserInFile(const MyString& filename, const User* user) const {
 	std::ifstream stream(filename.data(), std::ios::binary);
 	if (!stream.is_open()) {

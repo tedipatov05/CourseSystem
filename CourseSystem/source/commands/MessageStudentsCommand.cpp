@@ -51,9 +51,7 @@ void MessageStudentsCommand::saveMessage(const MyString& filename, const Message
 	file.close();
 }
 
-MyString MessageStudentsCommand::getCommand() const {
-	return "message_students";
-}
+
 
 MyString MessageStudentsCommand::getCourseName() const {
 	Vector<MyString> tokens = split(buffer, " ");

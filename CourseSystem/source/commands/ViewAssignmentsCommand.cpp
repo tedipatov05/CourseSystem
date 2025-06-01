@@ -30,9 +30,6 @@ void ViewAssignmentsCommand::execute() {
 	}
 }
 
-MyString ViewAssignmentsCommand::getCommand() const {
-	return "view_assignments";
-}
 
 MyString ViewAssignmentsCommand::getCourseName() const {
 	Vector<MyString> tokens = split(buffer, " ");

@@ -9,7 +9,6 @@ class Command{
 public:
 
 	Command(const MyString& buffer, Context& ctx);
-	virtual MyString getCommand() const = 0;
 	virtual void execute() = 0;
 	virtual ~Command() = default;
 

@@ -7,9 +7,7 @@
 ViewGradesCommand::ViewGradesCommand(const MyString& buffer, Context& system) : Command(buffer, system) {
 }
 
-MyString ViewGradesCommand::getCommand() const {
-	return "view_grades";
-}
+
 
 void ViewGradesCommand::execute() {
 	if (this->context.user_id == -1) {

@@ -9,7 +9,6 @@ class AssignHomeworkCommand : public Command {
 public:
 	AssignHomeworkCommand(const MyString& buffer, Context& ctx);
 	void execute() override;
-	MyString getCommand() const override;
 
 private:
 

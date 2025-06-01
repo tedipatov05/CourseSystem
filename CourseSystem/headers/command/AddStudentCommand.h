@@ -9,7 +9,6 @@ class AddStudentCommand : public Command{
 
 public:
 	AddStudentCommand(const MyString& buffer, Context& system);
-	MyString getCommand() const override;
 	void execute() override;
 
 private:

@@ -8,7 +8,6 @@
 class MailboxCommand : public Command{
 public:
 	MailboxCommand(const MyString& buffer, Context& system);
-	MyString getCommand() const override;
 	void execute() override;
 
 };

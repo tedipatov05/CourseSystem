@@ -9,9 +9,6 @@ MessageAllCommand::MessageAllCommand(const MyString& buffer, Context& system) : 
 	setUsernames();
 }
 
-MyString MessageAllCommand::getCommand() const {
-	return "message_all";
-}
 
 void MessageAllCommand::execute() {
 	MyString messageContent = getMessageContentFromBuffer();

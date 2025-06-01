@@ -8,9 +8,7 @@ AddToCourseCommand::AddToCourseCommand(const MyString& buffer, Context& context)
 	
 }
 
-MyString AddToCourseCommand::getCommand() const {
-	return "add_to_course";
-}
+
 
 int AddToCourseCommand::findCourseToAdd(const MyString& courseName) const {
 	for (int i = 0; i < context.courses.size(); i++) {

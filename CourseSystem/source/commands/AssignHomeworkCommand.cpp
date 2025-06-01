@@ -8,9 +8,6 @@ AssignHomeworkCommand::AssignHomeworkCommand(const MyString& buffer, Context& ct
 	
 }
 
-MyString AssignHomeworkCommand::getCommand() const {
-	return "assign_homework";
-}
 
 void AssignHomeworkCommand::execute() {
 	if (this->context.user_type != UserType::Teacher) {

@@ -8,10 +8,6 @@
 CreateCourseCommand::CreateCourseCommand(const MyString& buffer, Context& system) : Command(buffer, system){
 }
 
-MyString CreateCourseCommand::getCommand() const {
-	return "create_course";
-}
-
 MyString CreateCourseCommand::getCourseNameFromBuffer() const {
 	Vector<MyString> tokens = split(buffer, " ");
 	if (tokens.size() < 3) {

@@ -11,7 +11,6 @@ class AddToCourseCommand :
 public:
 	AddToCourseCommand(const MyString& buffer, Context& context);
 	void execute() override;
-	MyString getCommand() const override;
 
 private:
 

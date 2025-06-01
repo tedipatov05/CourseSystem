@@ -7,7 +7,6 @@ class ViewGradesCommand :public Command{
 public:
 	ViewGradesCommand(const MyString& buffer, Context& system);
 	void execute() override;
-	MyString getCommand() const override;
 
 private:
 	Vector<Grade> grades;

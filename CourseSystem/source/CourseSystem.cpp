@@ -1,12 +1,9 @@
 ﻿// Teodor Patov 2MI0600491
 
 #include <iostream>
-#include <string>
 #include "../headers/Context.h"
 #include "../headers/command/CommandFactory.h"
-#include "../headers/users/Admin.h"
-#include "../headers/users/Teacher.h"
-#include "../headers/users/Student.h"
+
 
 
 int main()

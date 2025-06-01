@@ -11,9 +11,7 @@ AddTeacherCommand::AddTeacherCommand(const MyString& buffer, Context& system) : 
 	
 }
 
-MyString AddTeacherCommand::getCommand() const {
-	return "add_teacher";
-}
+
 
 void AddTeacherCommand::execute(){
 	if (context.user_type != UserType::Admin) {

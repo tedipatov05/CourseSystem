@@ -3,12 +3,6 @@
 #include "../../headers/command/LoginCommand.h"
 #include <iostream>
 
-MyString LoginCommand::getCommand() const{
-	return "login";
-}
-
-
-
 void LoginCommand::execute() {
 	if (this->context.user_id != -1) {
 		std::cout << "You are already logged in!" << std::endl;

@@ -6,9 +6,6 @@
 LogoutCommand::LogoutCommand(const MyString& buffer, Context& system) : Command(buffer, system) {
 }
 
-MyString LogoutCommand::getCommand() const {
-	return "logout";
-}
 
 void LogoutCommand::execute(){
 	if (this->context.user_id != -1){

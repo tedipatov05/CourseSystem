@@ -7,10 +7,6 @@ GradeAssignmentCommand::GradeAssignmentCommand(const MyString& buffer, Context& 
 
 }
 
-MyString GradeAssignmentCommand::getCommand() const {
-	return "grade_assignment";
-}
-
 void GradeAssignmentCommand::execute() {
 	if (this->context.user_id == -1) {
 		std::cout << "You are not logged in." << std::endl;

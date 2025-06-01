@@ -43,9 +43,6 @@ void MessageUserCommand::saveMessageInFile(const MyString& filename, const Messa
 }
 
 
-MyString MessageUserCommand::getCommand() const {
-	return "message";
-}
 
 int MessageUserCommand::getUserId() const {
 	Vector<MyString> tokens = split(buffer, " ");

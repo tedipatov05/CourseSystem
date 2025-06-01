@@ -18,10 +18,6 @@ void ClearMailboxCommand::execute() {
 	}
 }
 
-MyString ClearMailboxCommand::getCommand() const {
-	return "clear_mailbox";
-}
-
 void ClearMailboxCommand::clearFile(const MyString& filename, const MyString& username) const {
 	std::ofstream file(filename.data(), std::ios::binary | std::ios::trunc);
 	if (!file.is_open()) {

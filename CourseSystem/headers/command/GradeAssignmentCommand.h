@@ -9,7 +9,6 @@ public:
 
 	GradeAssignmentCommand(const MyString& buffer, Context& system);
 	void execute() override;
-	MyString getCommand() const override;
 
 private:
 

@@ -10,7 +10,6 @@ class SubmitAssignmentCommand :public Command{
 public:
 	SubmitAssignmentCommand(const MyString& buffer, Context& ctx);
 	void execute() override;
-	MyString getCommand() const override;
 private:
 	
 

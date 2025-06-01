@@ -10,7 +10,6 @@ class EnrollCommand : public Command{
 public:
 	EnrollCommand(const MyString& buffer, Context& ctx);
 	void execute() override;
-	MyString getCommand() const override;
 
 private:
 

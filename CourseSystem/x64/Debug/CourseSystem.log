@@ -10,7 +10,7 @@ D:\ФМИ\CourseSystem\CourseSystem\source\MyString.cpp(330,22): warning C4309: 
   AddToCourseCommand.cpp
   AssignHomeworkCommand.cpp
   ChangePasswordCommand.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\commands\ChangePasswordCommand.cpp(46,16): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+D:\ФМИ\CourseSystem\CourseSystem\source\commands\ChangePasswordCommand.cpp(40,16): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
   ClearMailboxCommand.cpp
   Command.cpp
   CommandFactory.cpp
@@ -21,8 +21,8 @@ D:\ФМИ\CourseSystem\CourseSystem\source\commands\ChangePasswordCommand.cpp(46
   LogoutCommand.cpp
   MailboxCommand.cpp
   MessageAllCommand.cpp
-D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageAllCommand.cpp(35,34): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageAllCommand.cpp(75,34): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageAllCommand.cpp(32,34): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageAllCommand.cpp(72,34): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   MessageStudentsCommand.cpp
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageStudentsCommand.cpp(34,34): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 D:\ФМИ\CourseSystem\CourseSystem\source\commands\MessageStudentsCommand.cpp(35,59): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data

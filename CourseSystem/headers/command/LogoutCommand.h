@@ -8,7 +8,6 @@
 class LogoutCommand : public Command{
 public:
 	void execute() override;
-	MyString getCommand() const override;
 	LogoutCommand(const MyString& buffer, Context& system);
 
 };

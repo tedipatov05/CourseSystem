@@ -12,7 +12,6 @@ class LoginCommand :
 
 public:
 	LoginCommand(const MyString& buffer, Context& system);
-	MyString getCommand() const override;
 	void execute() override;
 
 private:
