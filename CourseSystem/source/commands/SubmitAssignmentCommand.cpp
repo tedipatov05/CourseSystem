@@ -36,6 +36,13 @@ void SubmitAssignmentCommand::execute() {
 	}
 	User* user = context.user_repo.getUser(context.user_id);
 
+	for (size_t i = 0; i < assignment->getSubmissions().size(); i++){
+		if (assignment->getSubmissions()[i].getUserId() == user->getId()){
+			std::cout << "You already submitted homework!" << std::endl;
+		}
+	}
+	
+
 	Submission* submission = new Submission(user->username(), content, courseName, homeworkName, user->getId());
 	assignment->addSubmission(*submission);
 

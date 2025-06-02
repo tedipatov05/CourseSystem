@@ -66,6 +66,7 @@ void UserRepository::removeUser(const MyString& username) {
 	for (size_t i = indexToDelete; i < this->getSize() - 1; i++){
 		this->_users[i] = this->_users[i + 1];
 	}
+	this->_size--;
 
 
 }
@@ -123,6 +124,7 @@ void UserRepository::readFromBinaryFile(const MyString& filename) {
 
 	free();
 	this->_users = new User * [INITIAL_SIZE];
+	this->_capacity = INITIAL_SIZE;
 
 	while (!ifs.eof()) {
 		UserType type;

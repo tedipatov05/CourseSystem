@@ -18,6 +18,10 @@ void ChangePasswordCommand::execute() {
 			std::cout << "Old password is incorrect!" << std::endl;
 			return;
 		}
+		if (user->getPassword().size() != newPassword.size()){
+			std::cout << "Passwords should have the same length" << std::endl;
+		}
+
 		user->changePassword(newPassword);
 
 		modifyUserInFile(USERS_FILE, user);
